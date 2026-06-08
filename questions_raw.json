@@ -1,0 +1,466 @@
+[
+  {
+    "id": "3462",
+    "category": "Razonamiento Numérico",
+    "enunciado_html": "<p>Si gasto los 5/8  de mi sueldo, los cuales representan 300 dólares. ¿Qué cantidad ahorro?</p>",
+    "enunciado": "Si gasto los 5/8 de mi sueldo, los cuales representan 300 dólares. ¿Qué cantidad ahorro?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "480"
+      },
+      {
+        "id": "unknown",
+        "text": "150"
+      },
+      {
+        "id": "unknown",
+        "text": "180"
+      },
+      {
+        "id": "unknown",
+        "text": "240"
+      }
+    ]
+  },
+  {
+    "id": "3488",
+    "category": "Razonamiento Numérico",
+    "enunciado_html": "<p>Un cordel mide 2,4 metros. Se deben hacer dos nudos de modo que los tres segmentos en que queda dividido sean entre sí como 3:4:5. ¿Cuál es la medida que debe tener el segmento menor?</p>",
+    "enunciado": "Un cordel mide 2,4 metros. Se deben hacer dos nudos de modo que los tres segmentos en que queda dividido sean entre sí como 3:4:5. ¿Cuál es la medida que debe tener el segmento menor?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "60 cm"
+      },
+      {
+        "id": "unknown",
+        "text": "80 cm"
+      },
+      {
+        "id": "unknown",
+        "text": "100 cm"
+      },
+      {
+        "id": "unknown",
+        "text": "120 cm"
+      }
+    ]
+  },
+  {
+    "id": "10537",
+    "category": "Razonamiento Numérico",
+    "enunciado_html": "<p>La intensidad de la luz de una fuente es inversamente proporcional al cuadrado de la distancia a la fuente. A 3 metros la intensidad es 16 unidades. ¿Cuál será a 4 metros?</p>",
+    "enunciado": "La intensidad de la luz de una fuente es inversamente proporcional al cuadrado de la distancia a la fuente. A 3 metros la intensidad es 16 unidades. ¿Cuál será a 4 metros?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "12 unidades"
+      },
+      {
+        "id": "unknown",
+        "text": "9 unidades"
+      },
+      {
+        "id": "unknown",
+        "text": "28.4 unidades"
+      },
+      {
+        "id": "unknown",
+        "text": "10 unidades"
+      }
+    ]
+  },
+  {
+    "id": "4322",
+    "category": "Razonamiento Numérico",
+    "enunciado_html": "<p>Alejandro dio un examen para el ingreso a la Universidad. La evaluación constó de 120 preguntas y cada una de ellas tiene un valor de 3 puntos. Alejandro obtuvo un puntaje de 320. ¿Cuánto fue la fracción de error que tuvo Alejandro en su examen?</p>",
+    "enunciado": "Alejandro dio un examen para el ingreso a la Universidad. La evaluación constó de 120 preguntas y cada una de ellas tiene un valor de 3 puntos. Alejandro obtuvo un puntaje de 320. ¿Cuánto fue la fracción de error que tuvo Alejandro en su examen?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "88,88%"
+      },
+      {
+        "id": "unknown",
+        "text": "1/9"
+      },
+      {
+        "id": "unknown",
+        "text": "11,11%"
+      },
+      {
+        "id": "unknown",
+        "text": "8/9"
+      }
+    ]
+  },
+  {
+    "id": "4347",
+    "category": "Razonamiento Numérico",
+    "enunciado_html": "<p>Si los lápices se venden a 3 por 10 centavos. ¿Cuántos pueden comprarse con 90 centavos?</p>",
+    "enunciado": "Si los lápices se venden a 3 por 10 centavos. ¿Cuántos pueden comprarse con 90 centavos?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "27"
+      },
+      {
+        "id": "unknown",
+        "text": "30"
+      },
+      {
+        "id": "unknown",
+        "text": "270"
+      },
+      {
+        "id": "unknown",
+        "text": "9"
+      }
+    ]
+  },
+  {
+    "id": "3167",
+    "category": "Razonamiento Lógico",
+    "enunciado_html": "<p>Indique el número que le da continuidad a la serie:</p>\n<p style=\"text-align: center;\">12, 25, 39, 54, 70, ....</p>",
+    "enunciado": "Indique el número que le da continuidad a la serie: 12, 25, 39, 54, 70, ....",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "86"
+      },
+      {
+        "id": "unknown",
+        "text": "87"
+      },
+      {
+        "id": "unknown",
+        "text": "88"
+      },
+      {
+        "id": "unknown",
+        "text": "89"
+      }
+    ]
+  },
+  {
+    "id": "3072",
+    "category": "Razonamiento Lógico",
+    "enunciado_html": "<p style=\"text-align: justify;\">La sucesión permite generar códigos que faciliten la búsqueda de cada nuevo cliente en un almacén. ¿Cuál es el código que se le asignó al cuarto cliente?</p>\n<p style=\"text-align: center;\">4E, 8G, 16I, ___, 64M</p>",
+    "enunciado": "La sucesión permite generar códigos que faciliten la búsqueda de cada nuevo cliente en un almacén. ¿Cuál es el código que se le asignó al cuarto cliente? 4E, 8G, 16I, ___, 64M",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "20J"
+      },
+      {
+        "id": "unknown",
+        "text": "24J"
+      },
+      {
+        "id": "unknown",
+        "text": "28K"
+      },
+      {
+        "id": "unknown",
+        "text": "32K"
+      }
+    ]
+  },
+  {
+    "id": "4706",
+    "category": "Razonamiento Lógico",
+    "enunciado_html": "<p><strong>¿Qué</strong><strong> grupo de letras no viene bien?</strong></p>",
+    "enunciado": "¿Qué grupo de letras no viene bien?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "apqb"
+      },
+      {
+        "id": "unknown",
+        "text": "mabn"
+      },
+      {
+        "id": "unknown",
+        "text": "wabx"
+      },
+      {
+        "id": "unknown",
+        "text": "aabd"
+      }
+    ]
+  },
+  {
+    "id": "3518",
+    "category": "Razonamiento Lógico",
+    "enunciado_html": "<p style=\"text-align: justify;\">De una caja que contiene tres bolas negras, cuatro blancas y dos amarillas, se extrae al azar una de ellas. ¿Hallar la probalidad de que la bola extraída no se negra?</p>",
+    "enunciado": "De una caja que contiene tres bolas negras, cuatro blancas y dos amarillas, se extrae al azar una de ellas. ¿Hallar la probalidad de que la bola extraída no se negra?",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "2/3"
+      },
+      {
+        "id": "unknown",
+        "text": "4/5"
+      },
+      {
+        "id": "unknown",
+        "text": "1/3"
+      },
+      {
+        "id": "unknown",
+        "text": "6/8"
+      }
+    ]
+  },
+  {
+    "id": "7829",
+    "category": "Razonamiento Lógico",
+    "enunciado_html": "<p>Elige Ia palabra que contin&uacute;a la serie.</p>\n<p>Zorro, Rama, Mono, Nube,_&nbsp;</p>",
+    "enunciado": "Elige Ia palabra que contin&uacute;a la serie. Zorro, Rama, Mono, Nube,_&nbsp;",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "Estrella"
+      },
+      {
+        "id": "unknown",
+        "text": "Blanco"
+      },
+      {
+        "id": "unknown",
+        "text": "Bolo"
+      },
+      {
+        "id": "unknown",
+        "text": "Bola"
+      }
+    ]
+  },
+  {
+    "id": "2555",
+    "category": "Razonamiento Verbal",
+    "enunciado_html": "<p style=\"text-align: justify;\">Con base en el texto, identifique el sinónimo de la palabra en negrita:</p>\n<p style=\"text-align: justify;\">Don Quijote es una obra <strong> indispensable </strong>para cualquier lector.</p>",
+    "enunciado": "Con base en el texto, identifique el sinónimo de la palabra en negrita: Don Quijote es una obra indispensable para cualquier lector.",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "Imprescindible"
+      },
+      {
+        "id": "unknown",
+        "text": "Preferible"
+      },
+      {
+        "id": "unknown",
+        "text": "Reemplazable"
+      },
+      {
+        "id": "unknown",
+        "text": "Deseable"
+      }
+    ]
+  },
+  {
+    "id": "4856",
+    "category": "Razonamiento Verbal",
+    "enunciado_html": "<p><strong>Escoja el sinónimo de la siguiente palabra.</strong></p>\n<p class=\"text-center\">Imparcial</p>",
+    "enunciado": "Escoja el sinónimo de la siguiente palabra. Imparcial",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "Pesado"
+      },
+      {
+        "id": "unknown",
+        "text": "Ecuánime"
+      },
+      {
+        "id": "unknown",
+        "text": "Equidistante"
+      },
+      {
+        "id": "unknown",
+        "text": "Modesto"
+      }
+    ]
+  },
+  {
+    "id": "4807",
+    "category": "Razonamiento Verbal",
+    "enunciado_html": "<p>Elige la palabra que más se acerca al significado de:</p>\n<p>Interino</p>",
+    "enunciado": "Elige la palabra que más se acerca al significado de: Interino",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "Peculiar"
+      },
+      {
+        "id": "unknown",
+        "text": "Permanente"
+      },
+      {
+        "id": "unknown",
+        "text": "Hipot&eacute;tico"
+      },
+      {
+        "id": "unknown",
+        "text": "Provisional"
+      }
+    ]
+  },
+  {
+    "id": "2558",
+    "category": "Razonamiento Verbal",
+    "enunciado_html": "<p style=\"text-align: justify;\">Identifique el elemento al que hace referencia la metáfora marcada en negrita:</p>\n<p style=\"text-align: justify;\">Jugando un día,<br />un hermoso pequeño,<br />soñaba con paz y justicia<br />en un mundo perfecto.<br />De pronto un aguacero,<br />al niño despertó del sueño.<br />De sus ojos negros,<br /><strong>gotas de diamantes,</strong><br />caían sin cesar.<br />Conociendo la realidad<br />solo se piensa en tempestad<br />Diluvios y tristeza<br />En un mundo sin nobleza.</p>",
+    "enunciado": "Identifique el elemento al que hace referencia la metáfora marcada en negrita: Jugando un día, un hermoso pequeño, soñaba con paz y justicia en un mundo perfecto. De pronto un aguacero, al niño despertó del sueño. De sus ojos negros, gotas de diamantes, caían sin cesar. Conociendo la realidad solo se piensa en tempestad Diluvios y tristeza En un mundo sin nobleza.",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "Aguaceros"
+      },
+      {
+        "id": "unknown",
+        "text": "L&aacute;grimas"
+      },
+      {
+        "id": "unknown",
+        "text": "Diluvios"
+      },
+      {
+        "id": "unknown",
+        "text": "Tempestades"
+      }
+    ]
+  },
+  {
+    "id": "9334",
+    "category": "Razonamiento Verbal",
+    "enunciado_html": "<div class=\"fw-semibold\"><p><span>Lo más inquietante acerca de las influencias de la herencia biológica y del medio ambiente del niño, es que somos precisamente los _____ los ____ de ambas cosas.</span></p>",
+    "enunciado": "Lo más inquietante acerca de las influencias de la herencia biológica y del medio ambiente del niño, es que somos precisamente los _____ los ____ de ambas cosas.",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "tutores – gestores"
+      },
+      {
+        "id": "unknown",
+        "text": "hijos – resultados"
+      },
+      {
+        "id": "unknown",
+        "text": "profesores – iniciadores"
+      },
+      {
+        "id": "unknown",
+        "text": "padres – responsables"
+      }
+    ]
+  },
+  {
+    "id": "3647",
+    "category": "Atención y Concentración",
+    "enunciado_html": "<p><strong>Señalar exactamente al que está resaltado en las respuestas</strong></p>\n<p style=\"text-align: center;\">WU - wu - Wu - <strong>wú -</strong> WÜ </p>",
+    "enunciado": "Señalar exactamente al que está resaltado en las respuestas WU - wu - Wu - wú - WÜ",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "Wu"
+      },
+      {
+        "id": "unknown",
+        "text": "wu"
+      },
+      {
+        "id": "unknown",
+        "text": "WU"
+      },
+      {
+        "id": "unknown",
+        "text": "w&uacute;"
+      }
+    ]
+  },
+  {
+    "id": "3589",
+    "category": "Atención y Concentración",
+    "enunciado_html": "<p><strong>¿Qué números representan la siguiente palabra?</strong></p>\n<p style=\"text-align: center;\"><strong>MOJAR</strong></p>\n<table style=\"border-collapse: collapse; width: 100.016%; height: 224px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>A</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>B</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>C</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>D</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>E</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>F</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">78</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">17</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">32</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">58</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">71</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">64</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>G</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>H</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>I</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>J</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>K</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>L</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">15</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">89</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">65</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">31</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">22</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">36</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>M</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>N</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>O</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>P</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>Q</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>R</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">43</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">46</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">87</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">39</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">27</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">13</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>S</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>T</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>U</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>V</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>W</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>X</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">24</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">35</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">72</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">95</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">14</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">23</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>Y</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>Z</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">57</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">92</td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n</tr>\n</tbody>\n</table>",
+    "enunciado": "¿Qué números representan la siguiente palabra? MOJAR A B C D E F 78 17 32 58 71 64 G H I J K L 15 89 65 31 22 36 M N O P Q R 43 46 87 39 27 13 S T U V W X 24 35 72 95 14 23 Y Z 57 92",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "4387317815"
+      },
+      {
+        "id": "unknown",
+        "text": "4387317813"
+      },
+      {
+        "id": "unknown",
+        "text": "4687317815"
+      },
+      {
+        "id": "unknown",
+        "text": "4687417813"
+      }
+    ]
+  },
+  {
+    "id": "3527",
+    "category": "Atención y Concentración",
+    "enunciado_html": "<p><strong>Encuentre la palabra que continúe la siguiente serie:</strong></p>\n<p style=\"text-align: center;\">memoria, membrana, memento</p>",
+    "enunciado": "Encuentre la palabra que continúe la siguiente serie: memoria, membrana, memento",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "membrete"
+      },
+      {
+        "id": "unknown",
+        "text": "melanc&oacute;lico"
+      },
+      {
+        "id": "unknown",
+        "text": "mental"
+      },
+      {
+        "id": "unknown",
+        "text": "mezcal"
+      }
+    ]
+  },
+  {
+    "id": "7627",
+    "category": "Atención y Concentración",
+    "enunciado_html": "<p>Marca en la letra I si son id&eacute;nticos &oacute; en la D si son diferentes.</p>\n<p>CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA =</p>\n<p>CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA</p>",
+    "enunciado": "Marca en la letra I si son id&eacute;nticos &oacute; en la D si son diferentes. CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA = CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "I"
+      },
+      {
+        "id": "unknown",
+        "text": "D"
+      }
+    ]
+  },
+  {
+    "id": "7602",
+    "category": "Atención y Concentración",
+    "enunciado_html": "<p>Marca en la letra I si son idénticos ó en la D si son diferentes.</p>\n<p>&p_mmJ1T@Z=3J16M = &p_mmJ1T@Z=3J16M</p>",
+    "enunciado": "Marca en la letra I si son idénticos ó en la D si son diferentes. &p_mmJ1T@Z=3J16M = &p_mmJ1T@Z=3J16M",
+    "options": [
+      {
+        "id": "unknown",
+        "text": "I"
+      },
+      {
+        "id": "unknown",
+        "text": "D"
+      }
+    ]
+  }
+]

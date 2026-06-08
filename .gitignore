@@ -1,0 +1,25 @@
+# Android build outputs and caches
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.cxx/
+android/.idea/
+android/captures/
+android/*.iml
+android/.externalNativeBuild/
+android/app/src/main/assets/index.html
+android/app/src/main/assets/styles.css
+android/app/src/main/assets/app.js
+android/app/src/main/assets/questions.js
+
+# Local environment/IDE config
+.idea/
+.vscode/
+*.log
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

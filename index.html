@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador Avanzado de Admisión para la Universidad Nacional de Chimborazo (UNACH) 2026. Practica con 100 preguntas oficiales de Razonamiento Numérico, Lógico, Verbal y Atención.">
+    <title>Simulador de Admisión UNACH 2026 | Prepárate para la Universidad</title>
+    
+    <!-- Hojas de Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Contenedor Principal (Layout SPA) -->
+    <div class="app-container">
+
+        <!-- Sidebar Lateral de Navegación -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand-section">
+                <div class="brand-logo">U</div>
+                <div class="brand-info">
+                    <h1 class="brand-name">UNACH Sim</h1>
+                    <span class="brand-subtitle">Simulador de Admisión 2026</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <li>
+                    <button class="nav-item-btn active" data-view="dashboard">
+                        <i class="fa-solid fa-chart-pie"></i> Panel Principal
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item-btn" data-view="setup">
+                        <i class="fa-solid fa-graduation-cap"></i> Iniciar Simulador
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item-btn" data-view="study">
+                        <i class="fa-solid fa-book-open"></i> Guía de Estudio
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-item-btn" data-view="settings">
+                        <i class="fa-solid fa-sliders"></i> Configuración
+                    </button>
+                </li>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-toggle-container">
+                    <button class="theme-btn active" id="theme-dark-btn" onclick="state.settings.theme = 'dark'; document.documentElement.setAttribute('data-theme', 'dark'); Storage.save(); SoundEffects.play('tap'); document.getElementById('theme-light-btn').classList.remove('active'); this.classList.add('active');">
+                        <i class="fa-solid fa-moon"></i> Oscuro
+                    </button>
+                    <button class="theme-btn" id="theme-light-btn" onclick="state.settings.theme = 'light'; document.documentElement.setAttribute('data-theme', 'light'); Storage.save(); SoundEffects.play('tap'); document.getElementById('theme-dark-btn').classList.remove('active'); this.classList.add('active');">
+                        <i class="fa-solid fa-sun"></i> Claro
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Área de Contenido Principal -->
+        <main class="main-content">
+
+            <!-- ================= VIEW: DASHBOARD ================= -->
+            <section id="dashboard-view" class="view-section active">
+                <div class="section-header">
+                    <h2 class="section-title">¡Hola, Mathew!</h2>
+                    <p class="section-description">Bienvenido a tu panel de estudio. Aquí puedes hacer el seguimiento de tu progreso para entrar a la UNACH.</p>
+                </div>
+
+                <!-- Fila de Tarjetas de Estadísticas -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-scroll"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="dash-exams-count">0</span>
+                            <span class="stat-label">Exámenes Completados</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="dash-avg-score">0%</span>
+                            <span class="stat-label">Promedio de Aciertos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="dash-prep-level">Inicial</span>
+                            <span class="stat-label">Nivel de Preparación</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="dash-practices-count">0</span>
+                            <span class="stat-label">Preguntas Practicadas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layout del Dashboard -->
+                <div class="dashboard-layout">
+                    <!-- Columna de Progreso por Áreas -->
+                    <div class="dashboard-panel">
+                        <h3 class="panel-title"><i class="fa-solid fa-chart-line" style="color: var(--accent);"></i> Progreso por Áreas del Temario</h3>
+                        <div class="progress-list">
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-name"><i class="fa-solid fa-calculator" style="color: var(--accent);"></i> Razonamiento Numérico</span>
+                                    <span class="progress-percentage" id="dash-prog-val-0">0%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" id="dash-prog-fill-0"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-name"><i class="fa-solid fa-lightbulb" style="color: var(--accent-cyan);"></i> Razonamiento Lógico</span>
+                                    <span class="progress-percentage" id="dash-prog-val-1">0%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" id="dash-prog-fill-1"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-name"><i class="fa-solid fa-language" style="color: var(--success);"></i> Razonamiento Verbal</span>
+                                    <span class="progress-percentage" id="dash-prog-val-2">0%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" id="dash-prog-fill-2"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-header">
+                                    <span class="progress-name"><i class="fa-solid fa-eye" style="color: var(--warning);"></i> Atención y Concentración</span>
+                                    <span class="progress-percentage" id="dash-prog-val-3">0%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar-fill" id="dash-prog-fill-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna de Botón Rápido y Recomendaciones -->
+                    <div>
+                        <div class="quick-action-card mb-4">
+                            <h3 class="quick-action-title">¿Listo para practicar?</h3>
+                            <p class="quick-action-text">Empieza un simulador personalizado. Elige la cantidad de preguntas y el modo que mejor se adapte a tu tiempo.</p>
+                            <button class="primary-btn" onclick="setView('setup')">
+                                <i class="fa-solid fa-play"></i> Iniciar Simulador
+                            </button>
+                        </div>
+
+                        <div class="dashboard-panel">
+                            <h3 class="panel-title"><i class="fa-solid fa-circle-info" style="color: var(--warning);"></i> Consejos e Indicaciones</h3>
+                            <div class="recommendation-box" id="dash-recommendation-box">
+                                <!-- Se rellena dinámicamente con JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= VIEW: SETUP ================= -->
+            <section id="setup-view" class="view-section">
+                <div class="section-header">
+                    <h2 class="section-title">Configuración del Simulador</h2>
+                    <p class="section-description">Ajusta los parámetros antes de iniciar tu examen de prueba.</p>
+                </div>
+
+                <div class="setup-grid">
+                    <!-- Panel Izquierdo: Configuración -->
+                    <div class="setup-panel">
+                        <h3 class="setup-subtitle">Parámetros del Examen</h3>
+                        
+                        <div class="setup-group">
+                            <span class="setup-label">Cantidad de Preguntas</span>
+                            <div class="selector-buttons">
+                                <button class="selector-btn active" data-val="20">20</button>
+                                <button class="selector-btn" data-val="40">40</button>
+                                <button class="selector-btn" data-val="60">60</button>
+                                <button class="selector-btn" data-val="80">80</button>
+                                <button class="selector-btn" data-val="100">100</button>
+                            </div>
+                        </div>
+
+                        <div class="setup-group">
+                            <span class="setup-label">Modos y Herramientas</span>
+                            
+                            <div class="switch-option">
+                                <div class="switch-details">
+                                    <h4>Modo Libre / Práctica</h4>
+                                    <p>Muestra si respondiste bien de forma inmediata con su explicación.</p>
+                                </div>
+                                <label class="switch-control">
+                                    <input type="checkbox" id="exam-mode-toggle">
+                                    <span class="slider-round"></span>
+                                </label>
+                            </div>
+
+                            <div class="switch-option">
+                                <div class="switch-details">
+                                    <h4>Límite de Tiempo (Temporizador)</h4>
+                                    <p>Activa una cuenta regresiva de 1 minuto por pregunta para simular presión real.</p>
+                                </div>
+                                <label class="switch-control">
+                                    <input type="checkbox" id="exam-timer-toggle" checked>
+                                    <span class="slider-round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-4">
+                            <button class="primary-btn" onclick="startExam()">
+                                <i class="fa-solid fa-circle-check"></i> Comenzar Examen
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Panel Derecho: Información -->
+                    <div class="info-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div class="info-content">
+                            <h3>Sobre la Admisión UNACH</h3>
+                            <p>El examen oficial evalúa tus aptitudes de razonamiento y concentración en lugar de memorización. Para optimizar tu puntaje:</p>
+                            <ul class="info-list">
+                                <li><i class="fa-solid fa-check"></i> Lee atentamente las analogías verbales.</li>
+                                <li><i class="fa-solid fa-check"></i> Resuelve rápido los ejercicios de agilidad visual.</li>
+                                <li><i class="fa-solid fa-check"></i> En Razonamiento Numérico, haz primero los problemas lógicos.</li>
+                                <li><i class="fa-solid fa-check"></i> Activa el modo práctica si deseas aprender paso a paso.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= VIEW: EXAM CONSOLE ================= -->
+            <section id="exam-view" class="view-section">
+                <div class="exam-header">
+                    <div class="exam-info-block">
+                        <span class="exam-category-badge" id="exam-category-badge">Aptitud</span>
+                        <h3 class="exam-question-number" id="exam-question-number">Pregunta 1 de 20</h3>
+                    </div>
+                    
+                    <div class="exam-timer" id="exam-timer-display">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="exam-timer-val">20:00</span>
+                    </div>
+                </div>
+
+                <div class="exam-layout">
+                    <!-- Columna de Pregunta -->
+                    <div class="question-panel">
+                        <div class="question-text" id="exam-question-text">
+                            Cargando enunciado de la pregunta...
+                        </div>
+                        
+                        <div class="options-list" id="exam-options-list">
+                            <!-- Se renderizan dinámicamente -->
+                        </div>
+
+                        <!-- Caja de Explicación (Modo Libre/Práctica) -->
+                        <div class="explanation-box" id="exam-explanation-box" style="display: none;">
+                            <h4 class="explanation-title"><i class="fa-solid fa-robot"></i> Explicación de Gemini AI</h4>
+                            <p class="explanation-text" id="exam-explanation-text">Explicación del ejercicio...</p>
+                            
+                            <!-- Caja de consulta API dinámica -->
+                            <div class="mt-3" id="gemini-chat-container" style="display: none;">
+                                <button class="secondary-btn" id="gemini-ask-btn" style="font-size: 12px; padding: 8px 16px;">
+                                    <i class="fa-solid fa-bolt"></i> Preguntar a Gemini AI (Dinámico)
+                                </button>
+                                <div class="explanation-box mt-2" id="gemini-api-response-box" style="display: none; background-color: rgba(99, 102, 241, 0.08);">
+                                    <p class="explanation-text" id="gemini-response-text" style="font-style: italic;">Conectando...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Control de Navegación de Preguntas -->
+                        <div class="exam-controls">
+                            <div class="d-flex gap-2">
+                                <button class="secondary-btn" id="exam-prev-btn"><i class="fa-solid fa-arrow-left"></i> Anterior</button>
+                                <button class="secondary-btn" id="exam-flag-btn"><i class="fa-regular fa-flag"></i> Marcar</button>
+                            </div>
+                            <button class="primary-btn" id="exam-next-btn">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Columna de Cuadrícula de Navegación -->
+                    <div class="navigation-panel">
+                        <h4 class="setup-subtitle" style="margin-bottom: 12px;">Mapa de Preguntas</h4>
+                        <div class="nav-buttons-grid" id="exam-nav-grid">
+                            <!-- Rellenado dinámicamente -->
+                        </div>
+                        
+                        <div class="legend-container">
+                            <div class="legend-item"><div class="legend-color unanswered"></div> Pendiente</div>
+                            <div class="legend-item"><div class="legend-color answered"></div> Respondida</div>
+                            <div class="legend-item"><div class="legend-color flagged"></div> Marcada</div>
+                            <div class="legend-item"><div class="legend-color current"></div> Activa</div>
+                        </div>
+
+                        <button class="primary-btn mt-4" id="exam-finish-btn" style="width: 100%; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);">
+                            <i class="fa-solid fa-flag-checkered"></i> Entregar y Calificar
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= VIEW: POST-EXAM RESULTS ================= -->
+            <section id="results-view" class="view-section">
+                <div class="section-header">
+                    <h2 class="section-title">Resultados del Simulador</h2>
+                    <p class="section-description">Analiza tus respuestas y mira el diagnóstico de preparación.</p>
+                </div>
+
+                <!-- Cabecera de Puntaje -->
+                <div class="results-header-box">
+                    <div class="radial-score">
+                        <svg class="radial-score-svg" width="140" height="140">
+                            <circle class="circle-bg" cx="70" cy="70" r="62"></circle>
+                            <circle class="circle-fill" id="results-circle-fill" cx="70" cy="70" r="62"></circle>
+                        </svg>
+                        <div class="score-text-overlay">
+                            <span class="overlay-number" id="results-score-val">0/20</span>
+                            <span class="overlay-label" id="results-score-percent">0%</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="results-title">¡Examen Terminado!</h3>
+                    
+                    <div class="results-stats-row">
+                        <div class="results-stat-item">
+                            <span class="results-stat-val" id="results-time-val">0m 0s</span>
+                            <span class="results-stat-lbl">Tiempo Empleado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel de Diagnóstico Automatizado de Gemini -->
+                <div class="ai-diagnosis-panel">
+                    <h4 class="ai-header"><i class="fa-solid fa-brain"></i> Diagnóstico de Aptitudes - Gemini AI</h4>
+                    <p class="ai-text" id="results-ai-diagnosis">Analizando respuestas...</p>
+                </div>
+
+                <!-- Tabla de Rendimiento por Categorías -->
+                <div class="dashboard-panel mb-4">
+                    <h3 class="panel-title"><i class="fa-solid fa-chart-simple" style="color: var(--accent-cyan);"></i> Rendimiento por Categoría</h3>
+                    <table class="study-table" style="margin-bottom: 0;">
+                        <thead>
+                            <tr>
+                                <th>Área</th>
+                                <th>Aciertos</th>
+                                <th>Porcentaje de Éxito</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-categories-tbody">
+                            <!-- Rellenado por JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Listado de Revisión de Preguntas Contestadas -->
+                <div class="dashboard-panel">
+                    <div class="review-header">
+                        <h3 class="panel-title" style="margin-bottom: 0;"><i class="fa-solid fa-rectangle-list" style="color: var(--accent);"></i> Revisión de Preguntas</h3>
+                        <div class="review-filters">
+                            <button class="filter-btn active" data-filter="all">Todas</button>
+                            <button class="filter-btn" data-filter="correct">Correctas</button>
+                            <button class="filter-btn" data-filter="incorrect">Incorrectas</button>
+                            <button class="filter-btn" data-filter="skipped">Omitidas</button>
+                        </div>
+                    </div>
+                    
+                    <div class="review-list" id="results-review-list">
+                        <!-- Rellenado dinámicamente con JS -->
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button class="secondary-btn" onclick="setView('dashboard')"><i class="fa-solid fa-house"></i> Ir al Panel</button>
+                    <button class="primary-btn" onclick="setView('setup')"><i class="fa-solid fa-rotate-left"></i> Repetir Simulador</button>
+                </div>
+            </section>
+
+            <!-- ================= VIEW: STUDY GUIDE (TEMARIO) ================= -->
+            <section id="study-view" class="view-section">
+                <div class="section-header">
+                    <h2 class="section-title">Guía de Estudio Oficial</h2>
+                    <p class="section-description">Revisa los conceptos y fórmulas clave de cada área del examen UNACH.</p>
+                </div>
+
+                <div class="temario-layout">
+                    <!-- Menú Lateral del Temario -->
+                    <div class="temario-list">
+                        <button class="temario-item-btn active" data-topic="numerico" onclick="showStudyTopic('numerico')">
+                            <div class="temario-card-info">
+                                <div class="temario-card-icon"><i class="fa-solid fa-calculator"></i></div>
+                                <div class="temario-card-details">
+                                    <h3>Razonamiento Numérico</h3>
+                                    <p>Series, inecuaciones, proporciones</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--text-muted)"></i>
+                        </button>
+                        
+                        <button class="temario-item-btn" data-topic="logico" onclick="showStudyTopic('logico')">
+                            <div class="temario-card-info">
+                                <div class="temario-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                                <div class="temario-card-details">
+                                    <h3>Razonamiento Lógico</h3>
+                                    <p>Series alfanuméricas, silogismos</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--text-muted)"></i>
+                        </button>
+                        
+                        <button class="temario-item-btn" data-topic="verbal" onclick="showStudyTopic('verbal')">
+                            <div class="temario-card-info">
+                                <div class="temario-card-icon"><i class="fa-solid fa-language"></i></div>
+                                <div class="temario-card-details">
+                                    <h3>Razonamiento Verbal</h3>
+                                    <p>Sinónimos, analogías, precisión</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--text-muted)"></i>
+                        </button>
+                        
+                        <button class="temario-item-btn" data-topic="atencion" onclick="showStudyTopic('atencion')">
+                            <div class="temario-card-info">
+                                <div class="temario-card-icon"><i class="fa-solid fa-eye"></i></div>
+                                <div class="temario-card-details">
+                                    <h3>Atención y Concentración</h3>
+                                    <p>Agilidad visual, comparación, errores</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--text-muted)"></i>
+                        </button>
+                    </div>
+
+                    <!-- Panel de Contenido de Estudio -->
+                    <div class="temario-content-panel">
+                        
+                        <!-- Contenido: Razonamiento Numérico -->
+                        <article class="study-content-block active" id="study-numerico">
+                            <h3 class="study-topic-title">Razonamiento Numérico</h3>
+                            <p class="study-paragraph">Esta área evalúa tu habilidad matemática y la capacidad de analizar problemas numéricos prácticos.</p>
+                            
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Temas Clave:</h4>
+                            <ul class="study-sublist">
+                                <li><strong>Sucesiones y Series:</strong> Secuencia ordenada de números. Busca patrones de suma (+3, +5, +7...), multiplicación (*2, *3...) o cuadrados perfectos (1, 4, 9, 16, 25...).</li>
+                                <li><strong>Razonamiento Proporcional (Regla de Tres):</strong>
+                                    <br>• <i>Directa:</i> A más cantidad, más costo (multiplica cruzado: x = b*c / a).
+                                    <br>• <i>Inversa:</i> A más velocidad, menos tiempo (multiplica horizontal: x = a*b / c).
+                                </li>
+                                <li><strong>Ecuaciones e Inecuaciones:</strong> Planteamiento de problemas a partir de enunciados verbales (ej. problemas de edades, fracciones de sueldos o costos de prendas).</li>
+                                <li><strong>Probabilidad Básica:</strong> Relación de la regla de Laplace:
+                                    <br><code style="font-family: monospace; background: var(--bg-card); padding: 4px; border-radius: 4px; font-size: 11px;">P = Casos Favorables / Casos Totales</code>
+                                </li>
+                            </ul>
+
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Fórmulas Rápidas de Referencia:</h4>
+                            <table class="study-table">
+                                <thead>
+                                    <tr>
+                                        <th>Concepto</th>
+                                        <th>Fórmula / Relación</th>
+                                        <th>Ejemplo de aplicación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Regla de 3 Inversa</td>
+                                        <td>x = (Obreros1 * Días1) / Obreros2</td>
+                                        <td>Calcular días con más trabajadores</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Probabilidad Laplace</td>
+                                        <td>Favorables / Totales</td>
+                                        <td>Probabilidad de sacar bola azul</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ecuación lineal</td>
+                                        <td>ax + b = c</td>
+                                        <td>Hallar número sumado a su doble</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+
+                        <!-- Contenido: Razonamiento Lógico -->
+                        <article class="study-content-block" id="study-logico">
+                            <h3 class="study-topic-title">Razonamiento Lógico</h3>
+                            <p class="study-paragraph">El razonamiento lógico mide tu capacidad para extraer conclusiones a partir de ciertas premisas o patrones.</p>
+                            
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Temas Clave:</h4>
+                            <ul class="study-sublist">
+                                <li><strong>Series Alfanuméricas:</strong> Combinaciones de números y letras que avanzan alternadamente.
+                                    <br>• <i>Tip de oro:</i> Ten siempre a mano la posición del abecedario (A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=10, K=11, L=12, M=13, N=14, O=15...).
+                                </li>
+                                <li><strong>Deducción Lógica (Ordenamiento de Información):</strong> Problemas en los que varias personas se alinean en filas o se sientan en mesas redondas y debes descifrar sus posiciones.</li>
+                                <li><strong>Silogismos:</strong> Lógica proposicional con premisas categóricas (ej. Ningún mamífero vuela + Los murciélagos son mamíferos = Los murciélagos no vuelan).</li>
+                            </ul>
+
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Tabla de Equivalencia de Letras en Exámenes:</h4>
+                            <table class="study-table">
+                                <thead>
+                                    <tr>
+                                        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+
+                        <!-- Contenido: Razonamiento Verbal -->
+                        <article class="study-content-block" id="study-verbal">
+                            <h3 class="study-topic-title">Razonamiento Verbal</h3>
+                            <p class="study-paragraph">Mide tu manejo del lenguaje, comprensión de analogías y precisión en el uso del vocabulario.</p>
+                            
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Temas Clave:</h4>
+                            <ul class="study-sublist">
+                                <li><strong>Sinónimos y Antónimos:</strong> Palabras con significados similares u opuestos en un contexto determinado. Conocer términos complejos como: *altivo* (soberbio), *interino* (provisional), *indispensable* (imprescindible).</li>
+                                <li><strong>Analogías Verbales:</strong> Relaciones lógicas entre dos pares de palabras. Pueden ser:
+                                    <br>• <i>Causa - Efecto:</i> Terremoto - Destrucción.
+                                    <br>• <i>Parte - Todo:</i> Volante - Coche, Tecla - Piano.
+                                    <br>• <i>Agente - Hábitat:</i> Abeja - Colmena, Hormiga - Hormiguero.
+                                </li>
+                                <li><strong>Precisión Semántica:</strong> Completar oraciones con las palabras más lógicas y adecuadas gramaticalmente.</li>
+                                <li><strong>Metáforas:</strong> Identificar a qué objeto o situación se refiere una expresión poética (ej. "gotas de diamantes caían sin cesar" = lágrimas).</li>
+                            </ul>
+                        </article>
+
+                        <!-- Contenido: Atención y Concentración -->
+                        <article class="study-content-block" id="study-atencion">
+                            <h3 class="study-topic-title">Atención y Concentración</h3>
+                            <p class="study-paragraph">Esta sección mide la rapidez visual, precisión e identificación de pequeños detalles bajo presión.</p>
+                            
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Temas Clave:</h4>
+                            <ul class="study-sublist">
+                                <li><strong>Comparación de Datos (Idénticos/Diferentes):</strong> Compara dos cadenas complejas de caracteres, números o correos buscando fallos de un solo símbolo o tildes (ej. Quito vs Quíto).</li>
+                                <li><strong>Búsqueda de Errores en Codificación:</strong> Convertir palabras a números usando matrices o rejillas de equivalencias de forma rápida y precisa.</li>
+                                <li><strong>Percepción Visual y Aptitud Perceptiva:</strong> Encontrar el elemento diferente, intruso o que rompe la simetría dentro de un patrón (ej. encontrar una letra d en una fila de letras b).</li>
+                            </ul>
+
+                            <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Tip para el Examen:</h4>
+                            <p class="study-paragraph" style="font-style: italic; background-color: var(--bg-card); padding: 12px; border-radius: 8px; border-left: 3px solid var(--warning);">
+                                "No te detengas demasiado tiempo comparando. Revisa la primera mitad de la cadena, si es idéntica pasa a la segunda mitad. Entrena tus ojos para hacer escaneo de bloques en lugar de carácter por carácter."
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= VIEW: SETTINGS ================= -->
+            <section id="settings-view" class="view-section">
+                <div class="section-header">
+                    <h2 class="section-title">Configuración del Sistema</h2>
+                    <p class="section-description">Personaliza la experiencia del simulador y configura la API Key de Gemini.</p>
+                </div>
+
+                <div class="settings-list">
+                    <!-- Tarjeta: Gemini AI -->
+                    <div class="settings-card">
+                        <h3 class="setup-subtitle"><i class="fa-solid fa-robot" style="color: var(--accent);"></i> Configuración de Google Gemini AI</h3>
+                        <p class="study-paragraph" style="margin-bottom: 12px;">Para obtener explicaciones personalizadas y dinámicas en tiempo real durante tu práctica libre, coloca tu clave de API de Gemini a continuación.</p>
+                        
+                        <div class="settings-input-group">
+                            <label class="setup-label">API Key de Gemini</label>
+                            <input type="password" class="settings-input" id="settings-key-input" placeholder="Pega tu clave AI (ej: AIzaSy...)">
+                            <span class="brand-subtitle" style="display: block; margin-top: 6px;">Tus claves se guardan localmente en tu dispositivo y nunca se envían a servidores externos.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta: Preferencias Generales -->
+                    <div class="settings-card">
+                        <h3 class="setup-subtitle"><i class="fa-solid fa-gear" style="color: var(--accent-cyan);"></i> Preferencias Generales</h3>
+                        
+                        <div class="switch-option">
+                            <div class="switch-details">
+                                <h4>Efectos de Sonido</h4>
+                                <p>Tonos interactivos en los botones, aciertos y errores.</p>
+                            </div>
+                            <label class="switch-control">
+                                <input type="checkbox" id="settings-sound-toggle" checked>
+                                <span class="slider-round"></span>
+                            </label>
+                        </div>
+
+                        <div class="setup-group mt-3">
+                            <label class="setup-label">Esquema de Color (Tema)</label>
+                            <select class="settings-input" id="settings-theme-select" onchange="state.settings.theme = this.value; document.documentElement.setAttribute('data-theme', this.value); Storage.save(); SoundEffects.play('tap');">
+                                <option value="dark">Tema Oscuro (Predeterminado)</option>
+                                <option value="light">Tema Claro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Acciones Peligrosas -->
+                    <div class="settings-card" style="border-color: rgba(239, 68, 68, 0.25);">
+                        <h3 class="setup-subtitle" style="color: var(--danger);"><i class="fa-solid fa-triangle-exclamation"></i> Zona de Peligro</h3>
+                        <p class="study-paragraph" style="margin-bottom: 14px;">Restablece todos tus intentos, promedios y puntuaciones del simulador. Esto limpiará el almacenamiento local.</p>
+                        
+                        <button class="secondary-btn" onclick="resetStats()" style="color: var(--danger); border-color: rgba(239, 68, 68, 0.25);">
+                            <i class="fa-solid fa-trash-can"></i> Restablecer Estadísticas e Intentos
+                        </button>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 mt-2">
+                        <button class="primary-btn" onclick="saveSettings()"><i class="fa-solid fa-floppy-disk"></i> Guardar Cambios</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Botón menú flotante en móviles -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Scripts de la Aplicación -->
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
