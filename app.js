@@ -131,8 +131,29 @@ const Storage = {
         
         const cachedStats = localStorage.getItem('unach_sim_stats');
         if (cachedStats) {
-            state.stats = { ...state.stats, ...JSON.parse(cachedStats) };
+            try {
+                const loadedStats = JSON.parse(cachedStats);
+                state.stats = { ...state.stats, ...loadedStats };
+            } catch (e) {
+                console.error("Error al parsear estadísticas:", e);
+            }
         }
+
+        // Garantizar que todas las categorías requeridas existan y no generen nulos
+        const requiredCategories = [
+            'Razonamiento Numérico',
+            'Razonamiento Lógico',
+            'Aptitud Verbal',
+            'Capacidad de Atención y Concentración'
+        ];
+        if (!state.stats.categoryStats) {
+            state.stats.categoryStats = {};
+        }
+        requiredCategories.forEach(cat => {
+            if (!state.stats.categoryStats[cat]) {
+                state.stats.categoryStats[cat] = { correct: 0, total: 0 };
+            }
+        });
     },
 
     reset() {
@@ -594,6 +615,9 @@ function finishExam(autoSubmitByTime = false) {
         if (isCorrect) catExamStats[q.category].correct++;
 
         // Sumar a las estadísticas generales históricas
+        if (!state.stats.categoryStats[q.category]) {
+            state.stats.categoryStats[q.category] = { correct: 0, total: 0 };
+        }
         state.stats.categoryStats[q.category].total++;
         if (isCorrect) state.stats.categoryStats[q.category].correct++;
     });
