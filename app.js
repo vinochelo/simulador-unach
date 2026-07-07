@@ -27,8 +27,8 @@ const state = {
         categoryStats: {
             'Razonamiento Numérico': { correct: 0, total: 0 },
             'Razonamiento Lógico': { correct: 0, total: 0 },
-            'Razonamiento Verbal': { correct: 0, total: 0 },
-            'Atención y Concentración': { correct: 0, total: 0 }
+            'Aptitud Verbal': { correct: 0, total: 0 },
+            'Capacidad de Atención y Concentración': { correct: 0, total: 0 }
         }
     }
 };
@@ -144,8 +144,8 @@ const Storage = {
             categoryStats: {
                 'Razonamiento Numérico': { correct: 0, total: 0 },
                 'Razonamiento Lógico': { correct: 0, total: 0 },
-                'Razonamiento Verbal': { correct: 0, total: 0 },
-                'Atención y Concentración': { correct: 0, total: 0 }
+                'Aptitud Verbal': { correct: 0, total: 0 },
+                'Capacidad de Atención y Concentración': { correct: 0, total: 0 }
             }
         };
         this.save();
@@ -201,8 +201,8 @@ function generateExamQuestions(length) {
     const categories = [
         'Razonamiento Numérico',
         'Razonamiento Lógico',
-        'Razonamiento Verbal',
-        'Atención y Concentración'
+        'Aptitud Verbal',
+        'Capacidad de Atención y Concentración'
     ];
     
     const questionsPerCategory = Math.floor(length / categories.length);
@@ -668,7 +668,7 @@ function generateDiagnosticFeedback(catStats) {
     let feedbackText = "";
     
     if (lowestScore === 100) {
-        feedbackText = "<strong>¡Felicidades! Diagnóstico de Gemini:</strong> Has obtenido un puntaje perfecto del 100%. Demuestras un dominio absoluto en todas las áreas evaluadas: Razonamiento Numérico, Lógico, Verbal, y Atención y Concentración. Estás completamente listo para el examen de la UNACH. ¡Mantén este ritmo y mucha confianza!";
+        feedbackText = "<strong>¡Felicidades! Diagnóstico de Gemini:</strong> Has obtenido un puntaje perfecto del 100%. Demuestras un dominio absoluto en todas las áreas evaluadas: Razonamiento Numérico, Lógico, Aptitud Verbal, y Capacidad de Atención y Concentración. Estás completamente listo para el examen de la UNACH. ¡Mantén este ritmo y mucha confianza!";
     } else {
         feedbackText = `<strong>Diagnóstico de Preparación (Gemini AI):</strong><br><br>`;
         feedbackText += `• Tu área más fuerte en este intento fue <strong>${highestCat}</strong> con un <strong>${Math.round(highestScore)}%</strong> de efectividad. Posees excelentes capacidades para resolver este tipo de reactivos.<br>`;
@@ -680,7 +680,7 @@ function generateDiagnosticFeedback(catStats) {
             feedbackText += "Enfócate en repasar proporciones directas/inversas, resolución de ecuaciones sencillas de primer grado, sucesiones numéricas exponenciales y cálculo de probabilidades básicas (casos favorables/totales). Usa la Guía de Estudio (Temario) para practicar.";
         } else if (lowestCat === 'Razonamiento Lógico') {
             feedbackText += "Dedica tiempo a resolver series alfanuméricas con dobles patrones y silogismos lógicos de premisas. Dibuja diagramas de Venn o de conjuntos cuando estudies deducción lógica de grupos de personas.";
-        } else if (lowestCat === 'Razonamiento Verbal') {
+        } else if (lowestCat === 'Aptitud Verbal') {
             feedbackText += "Amplía tu vocabulario técnico. Repasa sinónimos complejos, antónimos, y analiza relaciones metafóricas y analogías de parte-todo y causa-efecto. Lee con atención los textos identificando la tesis principal.";
         } else {
             feedbackText += "La concentración es clave aquí. Practica ejercicios de comparación rápida de textos y cadenas alfanuméricas complejas buscando pequeños fallos ortográficos o de puntuación. Estos reactivos suelen costar valioso tiempo si no se resuelven con rapidez.";
@@ -810,8 +810,8 @@ function updateDashboardUI() {
     const cats = [
         'Razonamiento Numérico',
         'Razonamiento Lógico',
-        'Razonamiento Verbal',
-        'Atención y Concentración'
+        'Aptitud Verbal',
+        'Capacidad de Atención y Concentración'
     ];
 
     let lowestScore = 101;
@@ -855,7 +855,7 @@ function updateDashboardUI() {
         } else if (lowestCat === 'Razonamiento Lógico') {
             topicText = "Refuerza series alfanuméricas complejas y la deducción de silogismos.";
             urlTarget = "logico";
-        } else if (lowestCat === 'Razonamiento Verbal') {
+        } else if (lowestCat === 'Aptitud Verbal') {
             topicText = "Amplía vocabulario de sinónimos/antónimos y comprensión de textos.";
             urlTarget = "verbal";
         } else {

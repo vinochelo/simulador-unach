@@ -1105,7 +1105,7 @@ const QUESTIONS = [
   },
   {
     "id": "2555",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado_html": "<p style=\"text-align: justify;\">Con base en el texto, identifique el sinónimo de la palabra en negrita:</p>\n<p style=\"text-align: justify;\">Don Quijote es una obra <strong> indispensable </strong>para cualquier lector.</p>",
     "enunciado": "Con base en el texto, identifique el sinónimo de la palabra en negrita: Don Quijote es una obra indispensable para cualquier lector.",
     "options": [
@@ -1131,7 +1131,7 @@ const QUESTIONS = [
   },
   {
     "id": "4856",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado_html": "<p><strong>Escoja el sinónimo de la siguiente palabra.</strong></p>\n<p class=\"text-center\">Imparcial</p>",
     "enunciado": "Escoja el sinónimo de la siguiente palabra. Imparcial",
     "options": [
@@ -1157,7 +1157,7 @@ const QUESTIONS = [
   },
   {
     "id": "4807",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado_html": "<p>Elige la palabra que más se acerca al significado de:</p>\n<p>Interino</p>",
     "enunciado": "Elige la palabra que más se acerca al significado de: Interino",
     "options": [
@@ -1183,7 +1183,7 @@ const QUESTIONS = [
   },
   {
     "id": "2558",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado_html": "<p style=\"text-align: justify;\">Identifique el elemento al que hace referencia la metáfora marcada en negrita:</p>\n<p style=\"text-align: justify;\">Jugando un día,<br />un hermoso pequeño,<br />soñaba con paz y justicia<br />en un mundo perfecto.<br />De pronto un aguacero,<br />al niño despertó del sueño.<br />De sus ojos negros,<br /><strong>gotas de diamantes,</strong><br />caían sin cesar.<br />Conociendo la realidad<br />solo se piensa en tempestad<br />Diluvios y tristeza<br />En un mundo sin nobleza.</p>",
     "enunciado": "Identifique el elemento al que hace referencia la metáfora marcada en negrita: Jugando un día, un hermoso pequeño, soñaba con paz y justicia en un mundo perfecto. De pronto un aguacero, al niño despertó del sueño. De sus ojos negros, gotas de diamantes, caían sin cesar. Conociendo la realidad solo se piensa en tempestad Diluvios y tristeza En un mundo sin nobleza.",
     "options": [
@@ -1209,7 +1209,7 @@ const QUESTIONS = [
   },
   {
     "id": "9334",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado_html": "<div class=\"fw-semibold\"><p><span>Lo más inquietante acerca de las influencias de la herencia biológica y del medio ambiente del niño, es que somos precisamente los _____ los ____ de ambas cosas.</span></p>",
     "enunciado": "Lo más inquietante acerca de las influencias de la herencia biológica y del medio ambiente del niño, es que somos precisamente los _____ los ____ de ambas cosas.",
     "options": [
@@ -1235,7 +1235,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_21",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Elija la palabra que es un antónimo de la palabra: EFÍMERO",
     "options": [
       {
@@ -1256,7 +1256,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_22",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Complete la siguiente analogía verbal: Volante es a Coche como Timón es a:",
     "options": [
       {
@@ -1277,7 +1277,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_23",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Seleccione el sinónimo de la palabra en negrita: El juez actuó de forma **benévola** con el acusado.",
     "options": [
       {
@@ -1298,7 +1298,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_24",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Identifique el conector que complete de forma coherente el texto: El joven estudió con esmero para el examen de admisión, ______ no logró obtener el cupo deseado debido al alto nivel de competencia.",
     "options": [
       {
@@ -1319,7 +1319,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_25",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Elija la opción que complete adecuadamente la analogía: ABEJA es a COLMENA como HORMIGA es a:",
     "options": [
       {
@@ -1340,7 +1340,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_26",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Con base en el texto, identifique el antónimo de la palabra en negrita: El ruido de la manifestación fue **estruendoso**.",
     "options": [
       {
@@ -1361,7 +1361,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_27",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Complete la oración con la opción semánticamente correcta: La constante _____ de los bosques provoca la _____ de los suelos.",
     "options": [
       {
@@ -1382,7 +1382,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_28",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Identifique el significado del término subrayado: La lectura diaria es un hábito que **enriquece** el vocabulario de las personas.",
     "options": [
       {
@@ -1403,7 +1403,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_29",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Elija la palabra que no guarda relación de significado con las otras: Diligente, Activo, Hacendoso, Apático, Trabajador",
     "options": [
       {
@@ -1424,7 +1424,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_30",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Complete la analogía: PÁJARO es a NIDO como OSO es a:",
     "options": [
       {
@@ -1445,7 +1445,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_31",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Identifique el sinónimo de la palabra: COPIOSO",
     "options": [
       {
@@ -1466,7 +1466,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_32",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Complete la oración con precisión semántica: Los argumentos del abogado defensor fueron tan _____ que el tribunal decidió _____ al acusado.",
     "options": [
       {
@@ -1487,7 +1487,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_33",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Elija la opción que representa el antónimo de la palabra: APATÍA",
     "options": [
       {
@@ -1508,7 +1508,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_34",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Complete la analogía: CALIENTE es a FRÍO como LUZ es a:",
     "options": [
       {
@@ -1529,7 +1529,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_35",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Seleccione el sinónimo de la palabra: ALTRUISMO",
     "options": [
       {
@@ -1550,7 +1550,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_36",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Identifique el elemento al que hace referencia la metáfora: El manto blanco cubría los campos en el frío amanecer invernal.",
     "options": [
       {
@@ -1571,7 +1571,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_37",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Elija la opción que guarde menor relación con la palabra: LIBRO",
     "options": [
       {
@@ -1592,7 +1592,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_38",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Identifique la opción que ordena coherentemente las siguientes palabras para formar una oración con sentido: 1. examen / 2. aprobar / 3. estudió / 4. para / 5. María / 6. el",
     "options": [
       {
@@ -1613,7 +1613,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_39",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Complete la oración: El _____ del volcán causó pánico en las poblaciones _____.",
     "options": [
       {
@@ -1634,7 +1634,7 @@ const QUESTIONS = [
   },
   {
     "id": "verb_40",
-    "category": "Razonamiento Verbal",
+    "category": "Aptitud Verbal",
     "enunciado": "Seleccione el sinónimo de la palabra en negrita: Aquel joven tiene una actitud muy **altiva**.",
     "options": [
       {
@@ -1655,7 +1655,7 @@ const QUESTIONS = [
   },
   {
     "id": "3647",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado_html": "<p><strong>Señalar exactamente al que está resaltado en las respuestas</strong></p>\n<p style=\"text-align: center;\">WU - wu - Wu - <strong>wú -</strong> WÜ </p>",
     "enunciado": "Señalar exactamente al que está resaltado en las respuestas WU - wu - Wu - wú - WÜ",
     "options": [
@@ -1681,7 +1681,7 @@ const QUESTIONS = [
   },
   {
     "id": "3589",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado_html": "<p><strong>¿Qué números representan la siguiente palabra?</strong></p>\n<p style=\"text-align: center;\"><strong>MOJAR</strong></p>\n<table style=\"border-collapse: collapse; width: 100.016%; height: 224px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>A</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>B</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>C</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>D</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>E</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>F</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">78</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">17</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">32</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">58</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">71</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">64</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>G</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>H</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>I</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>J</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>K</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>L</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">15</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">89</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">65</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">31</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">22</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">36</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>M</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>N</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>O</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>P</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>Q</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>R</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">43</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">46</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">87</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">39</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">27</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">13</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>S</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>T</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>U</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>V</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>W</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>X</strong></td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">24</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">35</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">72</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">95</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">14</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">23</td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>Y</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"><strong>Z</strong></td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n</tr>\n<tr style=\"height: 22.4px;\">\n<td style=\"width: 16.6668%; height: 22.4px;\">57</td>\n<td style=\"width: 16.6668%; height: 22.4px;\">92</td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n<td style=\"width: 16.6668%; height: 22.4px;\"> </td>\n</tr>\n</tbody>\n</table>",
     "enunciado": "¿Qué números representan la siguiente palabra? MOJAR A B C D E F 78 17 32 58 71 64 G H I J K L 15 89 65 31 22 36 M N O P Q R 43 46 87 39 27 13 S T U V W X 24 35 72 95 14 23 Y Z 57 92",
     "options": [
@@ -1707,7 +1707,7 @@ const QUESTIONS = [
   },
   {
     "id": "3527",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado_html": "<p><strong>Encuentre la palabra que continúe la siguiente serie:</strong></p>\n<p style=\"text-align: center;\">memoria, membrana, memento</p>",
     "enunciado": "Encuentre la palabra que continúe la siguiente serie: memoria, membrana, memento",
     "options": [
@@ -1733,7 +1733,7 @@ const QUESTIONS = [
   },
   {
     "id": "7627",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado_html": "<p>Marca en la letra I si son id&eacute;nticos &oacute; en la D si son diferentes.</p>\n<p>CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA =</p>\n<p>CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA</p>",
     "enunciado": "Marca en la letra I si son id&eacute;nticos &oacute; en la D si son diferentes. CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA = CAMINA-TROTA-PARA-PARA-TROTA-CAMINA-CAMINA-TROTA-TROTA-TROTA-PARA-CAMINA",
     "options": [
@@ -1751,7 +1751,7 @@ const QUESTIONS = [
   },
   {
     "id": "7602",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado_html": "<p>Marca en la letra I si son idénticos ó en la D si son diferentes.</p>\n<p>&p_mmJ1T@Z=3J16M = &p_mmJ1T@Z=3J16M</p>",
     "enunciado": "Marca en la letra I si son idénticos ó en la D si son diferentes. &p_mmJ1T@Z=3J16M = &p_mmJ1T@Z=3J16M",
     "options": [
@@ -1769,7 +1769,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_21",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si las dos series de números son exactamente idénticas, o 'D' si son diferentes: 987452614798 = 987452614798",
     "options": [
       {
@@ -1784,7 +1784,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_22",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si las dos series de caracteres son exactamente idénticas, o 'D' si son diferentes: &%#@KJH781_m = &%#@KJH78I_m",
     "options": [
       {
@@ -1799,7 +1799,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_23",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Señale la letra que es diferente a las demás en el siguiente grupo:",
     "options": [
       {
@@ -1820,7 +1820,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_24",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Codifique la palabra 'AMOR' sabiendo que: A=9, M=5, O=3, R=2",
     "options": [
       {
@@ -1841,7 +1841,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_25",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Encuentre la palabra intrusa o que difiere ortográficamente en la lista: cantar, cantar, canter, cantar, cantar",
     "options": [
       {
@@ -1862,7 +1862,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_26",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: 4578-XYZ-90-abc = 4578-XYZ-90-abc",
     "options": [
       {
@@ -1877,7 +1877,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_27",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: #$@_34_fg_TR = #$@_34_gf_TR",
     "options": [
       {
@@ -1892,7 +1892,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_28",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Señale la palabra que continúa la serie de manera ordenada según su primera letra en el abecedario: Abeja, Búho, Cebra, Delfín, ...",
     "options": [
       {
@@ -1913,7 +1913,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_29",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "¿Cuántas letras 's' minúsculas hay en la siguiente secuencia? aassaasasasaa",
     "options": [
       {
@@ -1934,7 +1934,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_30",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Identifique cuál de los siguientes códigos contiene un error respecto al código de referencia 'REF-789-XYZ':",
     "options": [
       {
@@ -1955,7 +1955,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_31",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: Juan Pérez Gómez / Calle 10 - Quito = Juan Pérez Gómez / Calle 10 - Quíto",
     "options": [
       {
@@ -1970,7 +1970,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_32",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "¿Qué palabra representa la siguiente codificación numérica? 3-1-19-1 (usando la correspondencia A=1, B=2, C=3, ..., S=19)",
     "options": [
       {
@@ -1991,7 +1991,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_33",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Señale el número resaltado de forma correcta a partir de la lista: 1478 - 1487 - 1477 - **1488** - 1848",
     "options": [
       {
@@ -2012,7 +2012,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_34",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Encuentre la letra que falta en la serie repetitiva de tres elementos: M, N, O, M, N, O, M, _, O",
     "options": [
       {
@@ -2033,7 +2033,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_35",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: 000100010100 = 000100010100",
     "options": [
       {
@@ -2048,7 +2048,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_36",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Encuentre el elemento que no encaja con los demás en la lista de nombres: Roberto, Rodolfo, Ricardo, Alberto, Rodrigo",
     "options": [
       {
@@ -2069,7 +2069,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_37",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: [12, {34, (56)}] = [12, {34, (56)}]",
     "options": [
       {
@@ -2084,7 +2084,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_38",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: info@precavidos.com = info@precavidos.con",
     "options": [
       {
@@ -2099,7 +2099,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_39",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "¿Qué número representa la letra intrusa en la secuencia? 4 4 4 4 4 4 9 4 4 4",
     "options": [
       {
@@ -2120,7 +2120,7 @@ const QUESTIONS = [
   },
   {
     "id": "att_40",
-    "category": "Atención y Concentración",
+    "category": "Capacidad de Atención y Concentración",
     "enunciado": "Marque 'I' si son idénticos, o 'D' si son diferentes: $ 1,245.90 = $ 1.245,90",
     "options": [
       {
