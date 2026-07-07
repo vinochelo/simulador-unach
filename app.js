@@ -1,5 +1,26 @@
 /* app.js - Motor y Lógica del Simulador UNACH 2026 */
 
+// Handler de errores global para debugging en WebView
+window.onerror = function (message, source, lineno, colno, error) {
+    const errDiv = document.createElement('div');
+    errDiv.style.position = 'fixed';
+    errDiv.style.top = '0';
+    errDiv.style.left = '0';
+    errDiv.style.width = '100%';
+    errDiv.style.background = '#ef4444';
+    errDiv.style.color = 'white';
+    errDiv.style.zIndex = '99999';
+    errDiv.style.padding = '16px';
+    errDiv.style.fontSize = '14px';
+    errDiv.style.fontFamily = 'monospace';
+    errDiv.style.overflow = 'auto';
+    errDiv.style.maxHeight = '50vh';
+    errDiv.style.boxShadow = '0 10px 25px rgba(0,0,0,0.5)';
+    errDiv.innerHTML = `<strong>Error de JS:</strong> ${message}<br><small>Archivo: ${source}<br>Línea: ${lineno}:${colno}</small>`;
+    document.body.appendChild(errDiv);
+    return false;
+};
+
 // --- ESTADO GLOBAL DE LA APLICACIÓN ---
 const state = {
     activeView: 'dashboard',
@@ -119,24 +140,32 @@ const SoundEffects = {
 // --- PERSISTENCIA LOCAL ---
 const Storage = {
     save() {
-        localStorage.setItem('unach_sim_settings', JSON.stringify(state.settings));
-        localStorage.setItem('unach_sim_stats', JSON.stringify(state.stats));
+        try {
+            localStorage.setItem('unach_sim_settings', JSON.stringify(state.settings));
+            localStorage.setItem('unach_sim_stats', JSON.stringify(state.stats));
+        } catch (e) {
+            console.warn("Storage.save: localStorage no disponible.", e);
+        }
     },
 
     load() {
-        const cachedSettings = localStorage.getItem('unach_sim_settings');
-        if (cachedSettings) {
-            state.settings = { ...state.settings, ...JSON.parse(cachedSettings) };
-        }
-        
-        const cachedStats = localStorage.getItem('unach_sim_stats');
-        if (cachedStats) {
-            try {
-                const loadedStats = JSON.parse(cachedStats);
-                state.stats = { ...state.stats, ...loadedStats };
-            } catch (e) {
-                console.error("Error al parsear estadísticas:", e);
+        try {
+            const cachedSettings = localStorage.getItem('unach_sim_settings');
+            if (cachedSettings) {
+                state.settings = { ...state.settings, ...JSON.parse(cachedSettings) };
             }
+            
+            const cachedStats = localStorage.getItem('unach_sim_stats');
+            if (cachedStats) {
+                try {
+                    const loadedStats = JSON.parse(cachedStats);
+                    state.stats = { ...state.stats, ...loadedStats };
+                } catch (e) {
+                    console.error("Error al parsear estadísticas:", e);
+                }
+            }
+        } catch (e) {
+            console.warn("Storage.load: localStorage no disponible.", e);
         }
 
         // Garantizar que todas las categorías requeridas existan y no generen nulos
@@ -157,7 +186,11 @@ const Storage = {
     },
 
     reset() {
-        localStorage.removeItem('unach_sim_stats');
+        try {
+            localStorage.removeItem('unach_sim_stats');
+        } catch (e) {
+            console.warn("Storage.reset: localStorage no disponible.", e);
+        }
         state.stats = {
             totalExams: 0,
             totalPractices: 0,
