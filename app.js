@@ -396,9 +396,10 @@ function updateQuestionUI() {
         explanation.style.display = 'block';
         document.getElementById('exam-explanation-text').textContent = q.explanation;
         
-        // Configura botón dinámico de Gemini si hay API Key
+        // Configura botón dinámico de Gemini si hay API Key o si estamos en la web
         const geminiChatContainer = document.getElementById('gemini-chat-container');
-        if (state.settings.geminiKey) {
+        const isWeb = window.location.protocol.startsWith('http');
+        if (state.settings.geminiKey || isWeb) {
             geminiChatContainer.style.display = 'block';
             document.getElementById('gemini-ask-btn').onclick = () => askGeminiAI(q);
         } else {
@@ -966,49 +967,82 @@ async function askGeminiAI(questionObj) {
     responseBox.style.display = 'block';
     responseText.textContent = "Conectando con Google Gemini AI...";
 
-    const promptText = `
-    Eres una inteligencia artificial experta en tutorías preuniversitarias para el examen de la Universidad Nacional de Chimborazo (UNACH).
-    Ayuda al estudiante a entender por qué la respuesta correcta a esta pregunta es la que se indica.
-    Pregunta (${questionObj.category}): ${questionObj.enunciado}
-    Las opciones de respuesta presentadas son:
-    ${questionObj.options.map((opt, i) => `${String.fromCharCode(65 + i)}) ${opt.text}`).join('\n')}
-    La opción correcta de respuesta es la letra: ${String.fromCharCode(65 + questionObj.correctIndex)}
-    El estudiante seleccionó la opción: ${String.fromCharCode(65 + state.exam.answers[questionObj.id])}
-    
-    Explica la resolución del ejercicio de manera breve, clara, didáctica y en español. Si es un problema matemático o lógico, desglosa los pasos aritméticos de forma concisa.
-    `;
+    const isWeb = window.location.protocol.startsWith('http');
+    const userAnsIndex = state.exam.answers[questionObj.id];
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${state.settings.geminiKey}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: promptText
-                    }]
-                }]
-            })
-        });
+        let explanationText = "";
 
-        if (!response.ok) {
-            throw new Error(`API respondió con estado: ${response.status}`);
-        }
+        // Si estamos en la web (HTTP/HTTPS) y no hay una API Key configurada localmente,
+        // usamos el proxy serverless de Vercel (/api/explain)
+        if (isWeb && !state.settings.geminiKey) {
+            const response = await fetch('/api/explain', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    questionObj: questionObj,
+                    userAnsIndex: userAnsIndex
+                })
+            });
 
-        const data = await response.json();
-        
-        if (data.candidates && data.candidates[0].content.parts[0].text) {
-            const reply = data.candidates[0].content.parts[0].text;
-            responseText.innerHTML = reply.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            if (!response.ok) {
+                const errData = await response.json();
+                throw new Error(errData.error || `Error del proxy: ${response.status}`);
+            }
+
+            const data = await response.json();
+            explanationText = data.explanation;
         } else {
-            responseText.textContent = "Error al recibir respuesta de Gemini AI. Comprueba los límites de tu API Key.";
+            // En APK local o si el usuario ingresó su propia clave en Configuración, llamamos directo
+            if (!state.settings.geminiKey) {
+                throw new Error("Por favor, ingresa tu API Key en la pestaña de Configuración para poder usar Gemini AI.");
+            }
+
+            const promptText = `
+            Eres una inteligencia artificial experta en tutorías preuniversitarias para el examen de la Universidad Nacional de Chimborazo (UNACH).
+            Ayuda al estudiante a entender por qué la respuesta correcta a esta pregunta es la que se indica.
+            Pregunta (${questionObj.category}): ${questionObj.enunciado}
+            Las opciones de respuesta presentadas son:
+            ${questionObj.options.map((opt, i) => `${String.fromCharCode(65 + i)}) ${opt.text}`).join('\n')}
+            La opción correcta de respuesta es la letra: ${String.fromCharCode(65 + questionObj.correctIndex)}
+            El estudiante seleccionó la opción: ${userAnsIndex !== undefined ? String.fromCharCode(65 + userAnsIndex) : 'Omitida'}
+            
+            Explica la resolución del ejercicio de manera breve, clara, didáctica y en español. Si es un problema matemático o lógico, desglosa los pasos aritméticos de forma concisa.
+            `;
+
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${state.settings.geminiKey}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    contents: [{
+                        parts: [{
+                            text: promptText
+                        }]
+                    }]
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`La API de Gemini respondió con estado: ${response.status}`);
+            }
+
+            const data = await response.json();
+            if (data.candidates && data.candidates[0].content.parts[0].text) {
+                explanationText = data.candidates[0].content.parts[0].text;
+            } else {
+                throw new Error("El formato de respuesta de la API de Gemini fue inesperado.");
+            }
         }
+
+        responseText.innerHTML = explanationText.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
     } catch (err) {
-        console.error("Error llamando a Gemini:", err);
-        responseText.textContent = "Error al conectar con la API de Gemini. Asegúrate de tener conexión a Internet y que tu API Key sea correcta.";
+        console.error("Error consultando Gemini:", err);
+        responseText.textContent = err.message || "Error al conectar con la API de Gemini. Asegúrate de tener conexión a Internet y que tu API Key sea correcta.";
     } finally {
         chatBtn.disabled = false;
         chatBtn.innerHTML = '<i class="fa-solid fa-bolt"></i> Preguntar a Gemini AI (Dinámico)';
