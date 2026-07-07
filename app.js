@@ -923,8 +923,21 @@ function showStudyTopic(topicId) {
 
 // --- PANEL DE CONFIGURACIONES ---
 function loadSettingsUI() {
-    // Configura inputs según el estado
-    document.getElementById('settings-key-input').value = state.settings.geminiKey;
+    const isWeb = window.location.protocol.startsWith('http');
+    const geminiCard = document.getElementById('settings-gemini-card');
+    
+    if (geminiCard) {
+        if (isWeb) {
+            geminiCard.innerHTML = `
+                <h3 class="setup-subtitle"><i class="fa-solid fa-robot" style="color: var(--accent);"></i> Google Gemini AI (Vercel Cloud)</h3>
+                <p class="study-paragraph" style="margin-bottom: 0;">Gemini AI está activo y configurado automáticamente a través de la nube de Vercel. No necesitas ingresar ninguna clave API.</p>
+            `;
+        } else {
+            const keyInput = document.getElementById('settings-key-input');
+            if (keyInput) keyInput.value = state.settings.geminiKey;
+        }
+    }
+
     document.getElementById('settings-sound-toggle').checked = state.settings.sound;
     
     const themeToggle = document.getElementById('settings-theme-select');
@@ -932,7 +945,13 @@ function loadSettingsUI() {
 }
 
 function saveSettings() {
-    state.settings.geminiKey = document.getElementById('settings-key-input').value.trim();
+    const isWeb = window.location.protocol.startsWith('http');
+    
+    if (!isWeb) {
+        const keyInput = document.getElementById('settings-key-input');
+        if (keyInput) state.settings.geminiKey = keyInput.value.trim();
+    }
+    
     state.settings.sound = document.getElementById('settings-sound-toggle').checked;
     
     const themeSelect = document.getElementById('settings-theme-select').value;
@@ -973,9 +992,8 @@ async function askGeminiAI(questionObj) {
     try {
         let explanationText = "";
 
-        // Si estamos en la web (HTTP/HTTPS) y no hay una API Key configurada localmente,
-        // usamos el proxy serverless de Vercel (/api/explain)
-        if (isWeb && !state.settings.geminiKey) {
+        // En la Web: Siempre usamos el proxy serverless de Vercel (/api/explain)
+        if (isWeb) {
             const response = await fetch('/api/explain', {
                 method: 'POST',
                 headers: {
@@ -995,7 +1013,7 @@ async function askGeminiAI(questionObj) {
             const data = await response.json();
             explanationText = data.explanation;
         } else {
-            // En APK local o si el usuario ingresó su propia clave en Configuración, llamamos directo
+            // En APK local: Usamos la clave local configurada en los ajustes
             if (!state.settings.geminiKey) {
                 throw new Error("Por favor, ingresa tu API Key en la pestaña de Configuración para poder usar Gemini AI.");
             }
@@ -1042,7 +1060,7 @@ async function askGeminiAI(questionObj) {
 
     } catch (err) {
         console.error("Error consultando Gemini:", err);
-        responseText.textContent = err.message || "Error al conectar con la API de Gemini. Asegúrate de tener conexión a Internet y que tu API Key sea correcta.";
+        responseText.textContent = err.message || "Error al conectar con la API de Gemini.";
     } finally {
         chatBtn.disabled = false;
         chatBtn.innerHTML = '<i class="fa-solid fa-bolt"></i> Preguntar a Gemini AI (Dinámico)';
