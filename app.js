@@ -220,7 +220,28 @@ function generateExamQuestions(length) {
     });
 
     // Barajamos el examen completo para mezclar las categorías de forma aleatoria
-    return selected.sort(() => 0.5 - Math.random());
+    const examQuestions = selected.sort(() => 0.5 - Math.random());
+
+    // Clonamos profundamente cada pregunta y barajamos sus opciones para evitar el sesgo de la opción A
+    return examQuestions.map(q => {
+        const copiedOptions = q.options.map(opt => ({ ...opt }));
+        const correctOptionOriginal = q.options[q.correctIndex];
+        
+        // Barajado Fisher-Yates de las opciones
+        for (let i = copiedOptions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copiedOptions[i], copiedOptions[j]] = [copiedOptions[j], copiedOptions[i]];
+        }
+        
+        // Buscamos el nuevo índice de la opción correcta
+        const newCorrectIndex = copiedOptions.findIndex(opt => opt.text === correctOptionOriginal.text);
+        
+        return {
+            ...q,
+            options: copiedOptions,
+            correctIndex: newCorrectIndex
+        };
+    });
 }
 
 // --- MOTOR DEL SIMULADOR (EXAMEN Y PRÁCTICA) ---

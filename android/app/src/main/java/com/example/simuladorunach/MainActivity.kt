@@ -38,6 +38,10 @@ class MainActivity : ComponentActivity() {
                                 settings.loadWithOverviewMode = true
                                 settings.useWideViewPort = true
                                 
+                                // Allow fetching from HTTPS APIs from local file:/// schemes
+                                settings.allowUniversalAccessFromFileURLs = true
+                                settings.allowFileAccessFromFileURLs = true
+                                
                                 // Disable scrollbars for a clean look
                                 isVerticalScrollBarEnabled = false
                                 isHorizontalScrollBarEnabled = false
